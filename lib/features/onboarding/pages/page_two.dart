@@ -17,9 +17,6 @@ class PageTwo extends StatelessWidget {
         children: [
           Body(
             content: [
-              const Center(
-                child: ErrorImageWidget(side: 200),
-              ),
               SizedBox(height: 20.h),
               Text(
                   'Choose your favorite team from the world\'s sports communities.',

@@ -16,9 +16,6 @@ class PageOne extends StatelessWidget {
       children: [
         Body(
           content: [
-            Center(
-              child: const ErrorImageWidget(side: 200),
-            ),
             Text(
               'Discover all about Basketball',
               style: TextStyle(fontSize: 40.sp, fontWeight: FontWeight.w600),

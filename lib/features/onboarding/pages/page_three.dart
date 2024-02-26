@@ -20,9 +20,6 @@ class PageThree extends StatelessWidget {
         children: [
           Body(
             content: [
-              const Center(
-                child: ErrorImageWidget(side: 200),
-              ),
               SizedBox(height: 20.h),
               Text(
                 'Follow the basketball news, as well as the matches in real time.',
