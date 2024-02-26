@@ -22,20 +22,20 @@ class NewsCard extends ConsumerWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Hero(
-              tag: 'news$index',
-              child: ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
-                  child: const ErrorImageWidget(side: 100)),
-            ),
             Column(
               children: [
                 SizedBox(
                   width: MediaQuery.of(context).size.width / 2,
-                  child: Text(news.title,
-                      maxLines: 3,
-                      overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(fontWeight: FontWeight.w600)),
+                  child: Hero(
+                    tag: 'news$index',
+                    child: Material(
+                      color: Colors.transparent,
+                      child: Text(news.title,
+                          maxLines: 3,
+                          overflow: TextOverflow.ellipsis,
+                          style: const TextStyle(fontWeight: FontWeight.w600)),
+                    ),
+                  ),
                 ),
               ],
             ),

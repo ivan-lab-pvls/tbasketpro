@@ -30,18 +30,20 @@ class _NewsDetailsScreenState extends State<NewsDetailsScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Hero(
-              tag: 'news${widget.index}',
-              child: const ErrorImageWidget(),
-            ),
             Padding(
               padding: const EdgeInsets.all(30.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(widget.news.title,
-                      style: TextStyle(
-                          fontWeight: FontWeight.w600, fontSize: 20.sp)),
+                  Hero(
+                    tag: 'news${widget.index}',
+                    child: Material(
+                      color: Colors.transparent,
+                      child: Text(widget.news.title,
+                          style: TextStyle(
+                              fontWeight: FontWeight.w600, fontSize: 20.sp)),
+                    ),
+                  ),
                   const SizedBox(height: 20),
                   Text(widget.news.content,
                       style: const TextStyle(fontWeight: FontWeight.w600)),

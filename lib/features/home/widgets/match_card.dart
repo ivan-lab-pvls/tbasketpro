@@ -55,15 +55,6 @@ class MatchCard extends ConsumerWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        const Expanded(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              ErrorImageWidget(side: 40),
-                              ErrorImageWidget(side: 40)
-                            ],
-                          ),
-                        ),
                         Expanded(
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
