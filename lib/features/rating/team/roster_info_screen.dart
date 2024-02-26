@@ -38,13 +38,7 @@ class RosterInfoScreen extends StatelessWidget {
                 onTap: () => context.router.push(PlayerInfoRoute(
                     player: roster[index], stat: roster[index].stat)),
                 child: ListTile(
-                  leading: Image.network(
-                    roster[index].imgUrl!,
-                    width: 80,
-                    height: 80,
-                    errorBuilder: (context, error, stackTrace) =>
-                        const ErrorImageWidget(side: 80),
-                  ),
+                  leading: const ErrorImageWidget(side: 80),
                   title: Text(roster[index].longName,
                       style: const TextStyle(fontWeight: FontWeight.w600)),
                   subtitle: Text(roster[index].team),

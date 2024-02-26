@@ -1,10 +1,9 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:basketball/api/models/news.dart';
+import 'package:basketball/features/news/screens/news.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../shared/error_image_widget.dart';
-import '../../shared/info_widget.dart';
 
 @RoutePage()
 class NewsDetailsScreen extends StatefulWidget {
@@ -33,13 +32,7 @@ class _NewsDetailsScreenState extends State<NewsDetailsScreen> {
           children: [
             Hero(
               tag: 'news${widget.index}',
-              child: widget.news.urlToImage == null
-                  ? const ErrorImageWidget()
-                  : Image.network(
-                      widget.news.urlToImage!,
-                      errorBuilder: (context, error, stackTrace) =>
-                          const ErrorImageWidget(),
-                    ),
+              child: const ErrorImageWidget(),
             ),
             Padding(
               padding: const EdgeInsets.all(30.0),
@@ -50,16 +43,12 @@ class _NewsDetailsScreenState extends State<NewsDetailsScreen> {
                       style: TextStyle(
                           fontWeight: FontWeight.w600, fontSize: 20.sp)),
                   const SizedBox(height: 20),
-                  Text(widget.news.description ?? '',
+                  Text(widget.news.content,
                       style: const TextStyle(fontWeight: FontWeight.w600)),
                   const SizedBox(height: 8),
                   Text(
                     widget.news.content,
                   ),
-                  const SizedBox(height: 20),
-                  widget.news.author == null
-                      ? const SizedBox.shrink()
-                      : InfoWidget(title: 'Author', child: widget.news.author!),
                 ],
               ),
             ),

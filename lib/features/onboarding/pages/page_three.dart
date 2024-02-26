@@ -6,6 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../../consts.dart';
 import '../../../main.dart';
 import '../../../router/router.dart';
+import '../../shared/error_image_widget.dart';
 import '../widgets/page_body.dart';
 import '../widgets/page_tail.dart';
 
@@ -19,7 +20,9 @@ class PageThree extends StatelessWidget {
         children: [
           Body(
             content: [
-              Center(child: Image.asset('assets/onboarding/3.png')),
+              const Center(
+                child: ErrorImageWidget(side: 200),
+              ),
               SizedBox(height: 20.h),
               Text(
                 'Follow the basketball news, as well as the matches in real time.',

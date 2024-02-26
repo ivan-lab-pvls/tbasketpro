@@ -55,30 +55,12 @@ class MatchCard extends ConsumerWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Expanded(
+                        const Expanded(
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Image.network(
-                                teamList
-                                    .firstWhere(
-                                        (team) => team.teamAbv == match.home)
-                                    .espnLogo1,
-                                width: 40,
-                                height: 40,
-                                errorBuilder: (context, error, stackTrace) =>
-                                    const ErrorImageWidget(side: 40),
-                              ),
-                              Image.network(
-                                teamList
-                                    .firstWhere(
-                                        (team) => team.teamAbv == match.away)
-                                    .espnLogo1,
-                                width: 40,
-                                height: 40,
-                                errorBuilder: (context, error, stackTrace) =>
-                                    const ErrorImageWidget(side: 40),
-                              ),
+                              ErrorImageWidget(side: 40),
+                              ErrorImageWidget(side: 40)
                             ],
                           ),
                         ),

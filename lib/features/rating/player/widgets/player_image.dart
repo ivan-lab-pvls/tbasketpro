@@ -12,22 +12,12 @@ class PlayerImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Column(
           children: [
-            if (player.imgUrl == null)
-              // ignore: prefer_const_constructors
-              ErrorImageWidget(side: 200)
-            else
-              Image.network(
-                player.imgUrl!,
-                width: 200,
-                height: 200,
-                errorBuilder: (context, error, stackTrace) =>
-                    const ErrorImageWidget(side: 200),
-              ),
+            ErrorImageWidget(side: 200),
           ],
         ),
       ],

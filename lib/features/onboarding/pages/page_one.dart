@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../shared/error_image_widget.dart';
 import '../widgets/buttons/next_page_button.dart';
 import '../widgets/page_body.dart';
 import '../widgets/page_tail.dart';
@@ -15,7 +16,9 @@ class PageOne extends StatelessWidget {
       children: [
         Body(
           content: [
-            Center(child: Image.asset('assets/onboarding/1.png')),
+            Center(
+              child: const ErrorImageWidget(side: 200),
+            ),
             Text(
               'Discover all about Basketball',
               style: TextStyle(fontSize: 40.sp, fontWeight: FontWeight.w600),
