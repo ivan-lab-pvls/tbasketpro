@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../shared/error_image_widget.dart';
 import '../widgets/buttons/next_page_button.dart';
 import '../widgets/page_body.dart';
 import '../widgets/page_tail.dart';
@@ -16,7 +17,6 @@ class PageTwo extends StatelessWidget {
         children: [
           Body(
             content: [
-              Center(child: Image.asset('assets/onboarding/2.png')),
               SizedBox(height: 20.h),
               Text(
                   'Choose your favorite team from the world\'s sports communities.',

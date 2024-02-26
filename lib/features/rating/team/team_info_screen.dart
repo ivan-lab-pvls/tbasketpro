@@ -33,13 +33,7 @@ class TeamInfoScreen extends StatelessWidget {
           children: [
             Column(
               children: [
-                Image.network(
-                  team.espnLogo1,
-                  width: 100,
-                  height: 100,
-                  errorBuilder: (context, error, stackTrace) =>
-                      const ErrorImageWidget(side: 100),
-                ),
+                const ErrorImageWidget(side: 100),
                 const SizedBox(height: 10),
                 CupertinoButton(
                     color: kOrange,

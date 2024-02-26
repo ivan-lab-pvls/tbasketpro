@@ -89,7 +89,10 @@ abstract class _$AppRouter extends RootStackRouter {
       final args = routeData.argsAs<RosterInfoRouteArgs>();
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: RosterInfoScreen(args.team),
+        child: RosterInfoScreen(
+          args.team,
+          key: args.key,
+        ),
       );
     },
     SettingsRoute.name: (routeData) {
@@ -340,10 +343,14 @@ class RatingRoute extends PageRouteInfo<void> {
 class RosterInfoRoute extends PageRouteInfo<RosterInfoRouteArgs> {
   RosterInfoRoute({
     required Team team,
+    Key? key,
     List<PageRouteInfo>? children,
   }) : super(
           RosterInfoRoute.name,
-          args: RosterInfoRouteArgs(team: team),
+          args: RosterInfoRouteArgs(
+            team: team,
+            key: key,
+          ),
           initialChildren: children,
         );
 
@@ -354,13 +361,18 @@ class RosterInfoRoute extends PageRouteInfo<RosterInfoRouteArgs> {
 }
 
 class RosterInfoRouteArgs {
-  const RosterInfoRouteArgs({required this.team});
+  const RosterInfoRouteArgs({
+    required this.team,
+    this.key,
+  });
 
   final Team team;
 
+  final Key? key;
+
   @override
   String toString() {
-    return 'RosterInfoRouteArgs{team: $team}';
+    return 'RosterInfoRouteArgs{team: $team, key: $key}';
   }
 }
 

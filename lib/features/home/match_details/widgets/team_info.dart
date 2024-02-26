@@ -19,13 +19,7 @@ class TeamInfoWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Image.network(
-          imgUrl,
-          width: 60,
-          height: 60,
-          errorBuilder: (context, error, stackTrace) =>
-              const ErrorImageWidget(side: 60),
-        ),
+        const ErrorImageWidget(side: 60),
         Text(city,
             style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w600)),
         Text(name,

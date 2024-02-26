@@ -32,13 +32,7 @@ class TeamsPage extends StatelessWidget {
                   onTap: () =>
                       context.router.push(TeamInfoRoute(team: teamList[index])),
                   child: ListTile(
-                    leading: Image.network(
-                      teamList[index].espnLogo1,
-                      width: 40,
-                      height: 40,
-                      errorBuilder: (context, error, stackTrace) =>
-                          const ErrorImageWidget(side: 40),
-                    ),
+                    leading: const ErrorImageWidget(side: 40),
                     title: Text(
                         '${teamList[index].teamCity} ${teamList[index].teamName}',
                         style: const TextStyle(fontWeight: FontWeight.w600)),

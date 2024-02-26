@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../api/models/given_match.dart';
-import '../api/models/news.dart';
 import '../api/models/player.dart';
 import '../api/models/player_stat_individual.dart';
 import '../api/models/team.dart';
+import '../features/news/screens/news.dart';
 import '../features/news/screens/news_details_screen.dart';
 import '../features/news/screens/news_screen.dart';
 import '../features/rating/player/player_info_screen.dart';
